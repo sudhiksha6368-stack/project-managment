@@ -1,0 +1,76 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Management Tool</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body><header>
+    <h1>Project Management Tool</h1>
+    <p>Plan, organize, and track your work</p>
+</header>
+
+<main class="container">
+
+    <section class="summary">
+        <div class="card">
+            <h3>Total Tasks</h3>
+            <p id="totalTasks">0</p>
+        </div>
+        <div class="card">
+            <h3>In Progress</h3>
+            <p id="progressTasks">0</p>
+        </div>
+        <div class="card">
+            <h3>Completed</h3>
+            <p id="completedTasks">0</p>
+        </div>
+    </section>
+
+    <section class="form-section">
+        <h2>Add New Task</h2>
+
+        <form id="taskForm">
+            <input type="text" id="taskTitle"
+                   placeholder="Enter task title" required>
+
+            <textarea id="taskDescription"
+                      placeholder="Enter task description"></textarea>
+
+            <select id="taskPriority">
+                <option value="Low">Low Priority</option>
+                <option value="Medium" selected>Medium Priority</option>
+                <option value="High">High Priority</option>
+            </select>
+
+            <input type="date" id="taskDeadline" required>
+
+            <select id="taskStatus">
+                <option value="To Do">To Do</option>
+                <option value="In Progress">In Progress</option>
+                <option value="Completed">Completed</option>
+            </select>
+
+            <button type="submit">Add Task</button>
+        </form>
+    </section>
+
+    <section class="tasks-section">
+        <h2>My Tasks</h2>
+
+        <input type="search" id="searchTask"
+               placeholder="Search tasks...">
+
+        <div id="taskList"></div>
+    </section>
+
+</main>
+
+<footer>
+    <p>Project Management Tool | CodeAlpha Internship Project</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
